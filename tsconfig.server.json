@@ -1,0 +1,24 @@
+{
+  "extends": "@strapi/typescript-utils/tsconfigs/server",
+
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    "rootDir": ".",
+    "lib": ["ES2022"],
+    "strictNullChecks": true,
+  },
+
+  "include": [
+    "server",
+    "server/**/*.json"
+  ],
+
+  "exclude": [
+    "node_modules/",
+    "dist/",
+
+    "admin/",
+    "**/*.test.ts"
+  ]
+}

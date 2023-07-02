@@ -1,0 +1,92 @@
+{
+  "name": "strapi-provider-apple",
+  "version": "1.0.0",
+  "description": "Handle apple authentication",
+  "files": [
+    "dist",
+    "strapi-server.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "strapi-server.js",
+  "types": "./index.d.ts",
+  "strapi": {
+    "name": "strapi-provider-apple",
+    "description": "Handle apple authentication",
+    "kind": "plugin"
+  },
+  "dependencies": {
+    "@strapi/design-system": "^1.6.3",
+    "@strapi/helper-plugin": "^4.6.0",
+    "@strapi/icons": "^1.6.3",
+    "prop-types": "^15.7.2",
+    "yup": "^1.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
+    "@semantic-release/commit-analyzer": "^10.0.1",
+    "@semantic-release/release-notes-generator": "^11.0.3",
+    "@strapi/typescript-utils": "^4.6.0",
+    "@types/koa": "^2.13.6",
+    "@types/react": "^17.0.53",
+    "@types/react-dom": "^18.0.28",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/styled-components": "^5.1.26",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsonc": "^2.9.0",
+    "eslint-plugin-no-secrets": "^0.8.9",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-sonarjs": "^0.19.0",
+    "eslint-plugin-unicorn": "^47.0.0",
+    "fixjson": "^1.1.2",
+    "husky": "^8.0.3",
+    "jsonc-eslint-parser": "^2.3.0",
+    "lint-staged": "^13.2.3",
+    "prettier": "^2.8.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^5.3.4",
+    "semantic-release": "^21.0.6",
+    "styled-components": "^5.3.6",
+    "typescript": "5.0.4"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0",
+    "react-router-dom": "^5.3.4",
+    "styled-components": "^5.3.6",
+    "@strapi/strapi": "^4.11.3"
+  },
+  "author": {
+    "name": "Roman Gonzalez"
+  },
+  "maintainers": [
+    {
+      "name": "Roman Gonzalez"
+    }
+  ],
+  "engines": {
+    "node": "18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "develop": "tsc -p tsconfig.server.json -w",
+    "build": "tsc -p tsconfig.server.json",
+    "lint": "yarn check-types && yarn eslint && yarn prettier:check",
+    "lint:fix": "yarn eslint:fix && yarn prettier:fix",
+    "eslint": "eslint --cache --ext .ts,.js --ignore-path .gitignore .",
+    "eslint:fix": "yarn eslint --fix",
+    "prettier:check": "prettier --check '**/*.ts' '**/*.js'",
+    "prettier:fix": "prettier --write '**/*.ts' '**/*.js'",
+    "check-types": "tsc --noemit"
+  },
+  "license": "MIT"
+}
